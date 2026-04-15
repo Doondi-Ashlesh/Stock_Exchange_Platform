@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: internal-dev-portal
+    runtime: node
+    plan: free
+    rootDir: internal-dev-portal
+    buildCommand: npm ci && npm run prisma:generate && npm run build
+    preDeployCommand: npm run prisma:migrate:deploy && npm run prisma:seed:if-empty
+    startCommand: npm run start
+    healthCheckPath: /api/health
+    buildFilter:
+      paths:
+        - internal-dev-portal/**
+        - render.yaml
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: internal-dev-portal-db
+          property: connectionString
+      - key: AUTH_SECRET
+        generateValue: true
+      - key: GITHUB_WEBHOOK_SECRET
+        generateValue: true
+      - key: GITHUB_CLIENT_ID
+        sync: false
+      - key: GITHUB_CLIENT_SECRET
+        sync: false
+      - key: NEXT_TELEMETRY_DISABLED
+        value: "1"
+
+databases:
+  - name: internal-dev-portal-db
+    plan: free
+    databaseName: internal_dev_portal
+    user: internal_dev_portal

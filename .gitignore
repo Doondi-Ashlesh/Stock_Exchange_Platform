@@ -1,0 +1,37 @@
+node_modules/
+.expo/
+dist/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# macOS
+.DS_Store
+
+# Temporary files created by Metro to check the health of the file watcher
+.metro-health-check*
+
+.env
+.env.*
+!.env.example
+!platform-api/.env.example
+.env.platform
+platform-api/.env
+platform-api/data/*.json
+*.toml
+
+# Dev server and test output
+*.log
+web.log
+platform-api.log
+atlasmarket-*.log
+run-platform-*.log
+run-web-*.log
+atlasmarket-web-*.log
+atlasmarket-web.*.log
+.claude/

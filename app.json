@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "AtlasMarket",
+    "scheme": "atlasmarket",
+    "slug": "atlasmarket",
+    "description": "Globe-first market intelligence and paper trading",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "primaryColor": "#040B15",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#040B15"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "icon": "./assets/icon.png"
+    },
+    "android": {
+      "icon": "./assets/icon.png",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#040B15"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "scope": "/"
+    }
+  }
+}
