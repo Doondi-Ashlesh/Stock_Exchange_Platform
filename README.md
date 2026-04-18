@@ -1,4 +1,4 @@
-# AtlasMarket — End-to-End Global Stock Exchange Platform
+# AtlasMarket — Global Stock Exchange Platform
 
 AtlasMarket is a production-ready, globe-first stock exchange and market-intelligence terminal. It combines a premium responsive web UI, live Finnhub market data, Stripe-powered billing, a full paper-brokerage engine, an auth-gated session, and a minimalist 3D world globe — all built on a shared Expo / React-Native codebase with a zero-dependency Node.js gateway.
 
